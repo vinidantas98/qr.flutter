@@ -249,8 +249,8 @@ class QrPainter extends CustomPainter {
           embeddedImageStyle != null ? embeddedImageStyle.size : null;
       final imageSize = _scaledAspectSize(size, originalSize, requestedSize);
       final position = Offset(
-        (size.width - imageSize.width) / 2.0,
-        (size.height - imageSize.height) / 2.0,
+        (size.width - imageSize.width),
+        (size.height - imageSize.height),
       );
       // draw the image overlay.
       _drawImageOverlay(canvas, position, imageSize, embeddedImageStyle);
